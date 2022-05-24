@@ -1,0 +1,13 @@
+<mat-checkbox
+  #showDetailsToggle
+  [checked]="isChecked"
+  (change)="onChange($event)"
+>
+  Show details ...
+</mat-checkbox>
+<div *ngIf="showDetailsToggle.checked">Some details ...</div>
+<br />
+<mat-radio-group>
+  <mat-radio-button value="1" [checked]="isChecked">Male</mat-radio-button>
+  <mat-radio-button value="0" >Female</mat-radio-button>
+</mat-radio-group>

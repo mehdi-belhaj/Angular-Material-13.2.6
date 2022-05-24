@@ -3,7 +3,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTableModule } from '@angular/material/table';
-import { MatInputModule } from '@angular/material/input'; 
+import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { NgModule } from '@angular/core';
@@ -14,6 +14,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -22,19 +25,22 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent,
     DataListingComponent,
     ListComponent,
+    CheckboxComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatInputModule,  // Needed for the search input box
-    MatTableModule,  // The core data table module
+    MatInputModule, // Needed for the search input box
+    MatTableModule, // The core data table module
     MatPaginatorModule,
     MatSortModule,
     MatProgressSpinnerModule,
-    AppRoutingModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
