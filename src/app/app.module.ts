@@ -14,10 +14,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SelectComponent } from './select/select.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +29,14 @@ import { MatRadioModule } from '@angular/material/radio';
     DataListingComponent,
     ListComponent,
     CheckboxComponent,
+    SelectComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     MatInputModule, // Needed for the search input box
     MatTableModule, // The core data table module
     MatPaginatorModule,
@@ -39,6 +44,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatRadioModule,
+    MatSelectModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
